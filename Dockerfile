@@ -31,6 +31,8 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 RUN /bin/bash -c "set -o pipefail && \
     wget -q https://developer.arm.com/-/media/Files/downloads/gnu-rm/10-2020q4/gcc-arm-none-eabi-10-2020-q4-major-x86_64-linux.tar.bz2 -O - | tar xj --strip-components=1 -C / && \
     rm -rf /arm-none-eabi/share/ /share/"
+    
+RUN pip3 install --upgrade pip setuptools
 
 # Install python packages
 RUN pip3 install nose2 qmk
