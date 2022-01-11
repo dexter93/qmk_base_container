@@ -21,4 +21,4 @@ jobs:
       uses: docker/build-push-action@v2.7.0
       with:
         push: true
-        tags: qmkfm/base_container:latest
+        tags: ${{ secrets.DOCKER_HUB_USERNAME }}/sonix_base_container:latest

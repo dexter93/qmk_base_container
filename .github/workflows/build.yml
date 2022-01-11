@@ -11,4 +11,4 @@ jobs:
 
     - name: Build the Docker image
       run: |
-        docker build -t qmkfm/base_container .
+        docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/sonix_base_container .
