@@ -1,4 +1,4 @@
-FROM debian:11-slim
+FROM debian:bookworm-slim
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     avr-libc \
